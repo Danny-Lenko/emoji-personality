@@ -1,46 +1,37 @@
 "use strict"
 
-let myEmojis = [];
-const emojiInput = document.querySelector('#emoji-input');
-const unshiftBtn = document.querySelector('#unshift-btn');
-const pushBtn = document.querySelector('#push-btn');
-const shiftBtn = document.querySelector('#shift-btn');
-const popBtn = document.querySelector('#pop-btn');
-const emojiContainer = document.querySelector('#emoji-container');
+let allEmojiArr = ['hi', 'ok', 'bye'];
 
-function renderEmojis() {
-   let emojisLooped = '';
-   for (let i = 0; i < myEmojis.length; i++) {
-      emojisLooped += `${myEmojis[i]} `
-   }
-   emojiContainer.innerHTML = emojisLooped;
+document.querySelector('#unshift-btn').addEventListener('click', unshiftEmj);
+document.querySelector('#shift-btn').addEventListener('click', shiftEmj);
+document.querySelector('#push-btn').addEventListener('click', pushEmj);
+document.querySelector('#pop-btn').addEventListener('click', popEmj);
+
+function unshiftEmj() {
+
+    renderEmj();
 }
 
-renderEmojis();
+function shiftEmj() {
+    allEmojiArr.shift();
+    renderEmj();
+}
 
-unshiftBtn.addEventListener('click', function() {
-   if (emojiInput.value) {
-      myEmojis.unshift(emojiInput.value);
-   }
-   renderEmojis();
-   emojiInput.value = "";
-})
+function pushEmj() {
 
-pushBtn.addEventListener('click', function() {
-   if (emojiInput.value) {
-      myEmojis.push(emojiInput.value);
-   }
-   renderEmojis();
-   emojiInput.value = "";
-})
+    renderEmj();
+}
 
-shiftBtn.addEventListener('click', function() {
-   myEmojis.shift();
-   renderEmojis();
-})
+function popEmj() {
+    allEmojiArr.pop();
+    renderEmj();
+}
 
-popBtn.addEventListener('click', function() {
-   myEmojis.pop();
-   renderEmojis();
-})
 
+function renderEmj() {
+    const emojiContainer = document.querySelector('#emoji-container');
+    emojiContainer.innerHTML = "";
+    for (let i = 0; i < allEmojiArr.length; i++) {
+        emojiContainer.innerHTML += allEmojiArr[i] + ' ';
+    }
+}
