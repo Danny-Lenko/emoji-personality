@@ -18,44 +18,32 @@
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- CSS utility classes
 
 
 ### What I learned
 
-1) the Utility Classes "gap" property to use between flex and grid elements (html customizable variable)
 
-```css
-.flex {
-   display: flex;
-   gap: var(--gap, 1.6rem);
-}
-.grid {
-   display: grid;
-   gap: var(--gap, 1.6rem);
-}
+1) easy method to fetch value from an input field
+
+```js
+document.getElementById('textbox_id').value;
+// For example
+document.getElementById("searchTxt").value;
 ```
+
 
 ### Continued development
 
-* aria (Accessible Rich Internet Applications);
-* CSS custom properties (figure out all the advantages of setting variables);
-* vh, vw values and their relevance;
-* the clamp() property;
 * CSS grid;
-* JS - setting local variables;
-* the minmax() property;
-* the translateX(Y) property;
+
 
 *Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
 ### Useful resources
 
-- [Grid Attack](https://codingfantasy.com) - This helped me practice CSS GRID. Challenging and interactive game aimed at learning the css grid properties' application.
+
+- [Stack Overflow](https://stackoverflow.com/questions/11563638/how-do-i-get-the-value-of-text-input-field-using-javascript) - This article contains more info on methods to fetch value from an input feild.
+
 
 - [Git + GitHub](https://www.youtube.com/watch?v=RGOj5yH7evk) - the basic git commands (Youtube).
 - [The Markdown Guide](https://www.markdownguide.org/) - for more help with writing markdown (Article).
