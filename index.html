@@ -2,19 +2,25 @@
     <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="index.css">
         <link href="https://fonts.googleapis.com/css2?family=Baloo&display=swap" rel="stylesheet">
+        <script src="index.js" defer></script>
     </head>
     <body>
-        <h1>My Emojis</h1>   
+    <div class="content-wrapper">
+        <h1>Valerii's Emojis</h1>   
         <div id="emoji-container"></div>
-        <input type="text" id="emoji-input" placeholder="type an emoji 🎉">
-        <div class="buttons-wrapper">
-            <button id="push-btn">Add to end</button>
-            <button id="unshift-btn">Add to beginning</button>
+        <div class="flexbox">
+            <div class="flexbox__box">
+                <button id="unshift-btn">+</button>
+                <button id="shift-btn">-</button>
+            </div>
+            <div class="flexbox__box">
+                <input type="text" id="emoji-input" placeholder="type an emoji 🎉">
+            </div>
+            <div class="flexbox__box">
+                <button id="push-btn">+</button>
+                <button id="pop-btn">-</button>
+            </div> 
         </div>
-        <div class="buttons-wrapper">
-            <button id="pop-btn">Remove from end</button>
-            <button id="shift-btn">Remove from beginning</button>
-        </div>
-        <script src="index.pack.js"></script>
+    </div>
     </body>
 </html>
