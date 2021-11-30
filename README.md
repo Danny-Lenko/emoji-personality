@@ -22,6 +22,7 @@
 
 ### What I learned
 
+
 1) easy method to fetch value from an input field
 
 ```js
@@ -29,6 +30,7 @@ document.getElementById('textbox_id').value;
 // For example
 document.getElementById("searchTxt").value;
 ```
+
 
 ### Continued development
 
@@ -39,7 +41,9 @@ document.getElementById("searchTxt").value;
 
 ### Useful resources
 
+
 - [Stack Overflow](https://stackoverflow.com/questions/11563638/how-do-i-get-the-value-of-text-input-field-using-javascript) - This article contains more info on methods to fetch value from an input feild.
+
 
 - [Git + GitHub](https://www.youtube.com/watch?v=RGOj5yH7evk) - the basic git commands (Youtube).
 - [The Markdown Guide](https://www.markdownguide.org/) - for more help with writing markdown (Article).
