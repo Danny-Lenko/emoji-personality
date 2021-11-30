@@ -6,13 +6,14 @@ html {
 body {
     padding: 10px;
     background-image: linear-gradient(#9393CB, #EBDDB3);
+    background-repeat: no-repeat;
 }
 
 .content-wrapper {
     border: 1px solid rgb(95, 95, 150);
     border-radius: 25px;
     max-width: 600px;
-    margin: 20px auto 0;
+    margin: 10vh auto;
     background-color: rgb(95, 95, 150);
 }
 
@@ -23,11 +24,7 @@ body {
     padding: 15px 10px;
     max-width: 300px;
     border-radius: 12px;
-    
-}
-
-#emoji-container span {
-    margin: 10px 3px 10px;
+    height: 50px;
     font-size: 50px;
 }
 
@@ -49,6 +46,7 @@ h1 {
 }
 
 input {
+    font-size: 18px;
     margin: 0 auto;
     display: block;
     border: none;
@@ -61,20 +59,24 @@ input {
 
 button {
     font-family: Baloo;
-    letter-spacing: px;
+    font-size: larger;
     background: darkcyan;
     color: black;
     border: none;
-    padding: 6px 11px;
+    padding: 0 12px;
+    aspect-ratio: 1;
     border-radius: 50%;
-    margin: 0 4px 4px;
+    margin: 2px 4px 2px;
+    line-height: 0;
 }
 
 .flexbox {
     display: flex;
-    justify-content: center;
-    padding-bottom: 35px;
+    justify-content: space-between;
+    align-items: center;
     flex: 1 1 auto;
+    width: 50%;
+    margin: 0 auto 50px;
 }
 
 .flexbox__box {
