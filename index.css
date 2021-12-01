@@ -17,6 +17,10 @@ body {
     background-color: rgb(95, 95, 150);
 }
 
+.flex {
+    display: flex;
+}
+
 #emoji-container {
     margin: 0 auto 20px;
     text-align: center;
@@ -70,8 +74,7 @@ button {
     line-height: 0;
 }
 
-.flexbox {
-    display: flex;
+.interaction {
     justify-content: space-between;
     align-items: center;
     flex: 1 1 auto;
@@ -79,7 +82,8 @@ button {
     margin: 0 auto 50px;
 }
 
-.flexbox__box {
+.interaction__box {
     display: flex;
     flex-direction: column;
 }
+
