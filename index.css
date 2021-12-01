@@ -9,6 +9,10 @@ body {
     background-repeat: no-repeat;
 }
 
+button {
+    cursor: pointer;
+}
+
 .content-wrapper {
     border: 1px solid rgb(95, 95, 150);
     border-radius: 25px;
@@ -26,9 +30,9 @@ body {
     text-align: center;
     border: 3px dotted #89ABC4;
     padding: 15px 10px;
-    max-width: 300px;
+    max-width: 400px;
     border-radius: 12px;
-    height: 50px;
+    min-height: 60px;
     font-size: 50px;
 }
 
@@ -61,7 +65,7 @@ input {
     max-width: 150px;
 }
 
-button {
+.round-btn {
     font-family: Baloo;
     font-size: larger;
     background: darkcyan;
@@ -71,7 +75,7 @@ button {
     aspect-ratio: 1;
     border-radius: 50%;
     margin: 2px 4px 2px;
-    line-height: 0;
+    line-height: 30px;
 }
 
 .interaction {
@@ -79,11 +83,26 @@ button {
     align-items: center;
     flex: 1 1 auto;
     width: 50%;
-    margin: 0 auto 50px;
+    margin: 0 auto 20px;
 }
 
 .interaction__box {
     display: flex;
     flex-direction: column;
+}
+
+.random-basic {
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.random-btn {
+    line-height: 38px;
+    width: 100px;
+    height: 35px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 0;
 }
 

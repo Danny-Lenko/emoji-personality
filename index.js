@@ -7,6 +7,7 @@ document.querySelector('#unshift-btn').addEventListener('click', unshiftEmj);
 document.querySelector('#shift-btn').addEventListener('click', shiftEmj);
 document.querySelector('#push-btn').addEventListener('click', pushEmj);
 document.querySelector('#pop-btn').addEventListener('click', popEmj);
+document.querySelector('#happy-btn').addEventListener('click', giveHappy);
 
 function unshiftEmj() {
     if (emojiInput.value) {
@@ -41,4 +42,22 @@ function renderEmj() {
     for (let i = 0; i < allEmojiArr.length; i++) {
         emojiContainer.innerHTML += allEmojiArr[i] + ' ';
     }
+}
+
+// let random = {
+//     happyArr: []
+// } 
+
+function giveHappy() {
+    let happyArr = ["😀", "😁", "😆", "😎", "😊", "🤗"];
+    let happyIndex = getRandom(happyArr.length);
+    let happyEmoji = happyArr[happyIndex];
+    allEmojiArr.push(happyEmoji);
+    renderEmj();
+}
+
+
+
+function getRandom(arrLength) {
+    return Math.floor(Math.random() * arrLength);
 }
