@@ -7,7 +7,13 @@ document.querySelector('#unshift-btn').addEventListener('click', unshiftEmj);
 document.querySelector('#shift-btn').addEventListener('click', shiftEmj);
 document.querySelector('#push-btn').addEventListener('click', pushEmj);
 document.querySelector('#pop-btn').addEventListener('click', popEmj);
-document.querySelector('#happy-btn').addEventListener('click', giveHappy);
+document.querySelector('#happy-btn').addEventListener('click', function() {
+    getRandomEmoji(random.happyArr);
+});
+document.querySelector('#emotion-btn').addEventListener('click', function() {
+    getRandomEmoji(random.emotionArr);
+});
+
 
 function unshiftEmj() {
     if (emojiInput.value) {
@@ -44,20 +50,14 @@ function renderEmj() {
     }
 }
 
-// let random = {
-//     happyArr: []
-// } 
+let random = {
+    happyArr: ["😀", "😁", "😆", "😎", "😊", "🤗"],
+    emotionArr: ["🤨", "😟", "😡", "🤯", "🤭", "😭", "😍"],
+};
 
-function giveHappy() {
-    let happyArr = ["😀", "😁", "😆", "😎", "😊", "🤗"];
-    let happyIndex = getRandom(happyArr.length);
-    let happyEmoji = happyArr[happyIndex];
-    allEmojiArr.push(happyEmoji);
+function getRandomEmoji(arr) {
+    let randomIndex = Math.floor(Math.random() * arr.length);
+    let randomEmoji = arr[randomIndex];
+    allEmojiArr.push(randomEmoji);
     renderEmj();
-}
-
-
-
-function getRandom(arrLength) {
-    return Math.floor(Math.random() * arrLength);
 }
