@@ -7,6 +7,22 @@ document.querySelector('#unshift-btn').addEventListener('click', unshiftEmj);
 document.querySelector('#shift-btn').addEventListener('click', shiftEmj);
 document.querySelector('#push-btn').addEventListener('click', pushEmj);
 document.querySelector('#pop-btn').addEventListener('click', popEmj);
+document.querySelector('#happy-btn').addEventListener('click', function() {
+    random.getRandomEmoji(random.happyArr);
+});
+document.querySelector('#emotion-btn').addEventListener('click', function() {
+    random.getRandomEmoji(random.emotionArr);
+});
+document.querySelector('#sports-btn').addEventListener('click', function() {
+    random.getRandomEmoji(random.sportsArr);
+});
+document.querySelector('#work-btn').addEventListener('click', function() {
+    random.getRandomEmoji(random.workArr);
+});
+document.querySelector('#dayoff-btn').addEventListener('click', function() {
+    random.getRandomEmoji(random.dayoffArr);
+});
+
 
 function unshiftEmj() {
     if (emojiInput.value) {
@@ -42,3 +58,19 @@ function renderEmj() {
         emojiContainer.innerHTML += allEmojiArr[i] + ' ';
     }
 }
+
+let random = {
+    happyArr: ["😀", "😁", "😆", "😎", "😊", "🤗"],
+    emotionArr: ["🤨", "😟", "😡", "🤯", "🤭", "😭", "😍"],
+    sportsArr: ["🏋🏻‍♀️", "🏌🏻‍♂️", "🚵🏻‍♀️", "🧗🏻‍♀️", "🏊🏻‍♂️", "⚽", "⛹🏼"],
+    workArr: ["👨🏼‍🚀", "👩🏼‍🏫", "👨🏼‍🏭", "👩🏼‍⚕️", "👨🏻‍🚒", "💂🏻‍♂️", "👨🏻‍💻"],
+    dayoffArr: ["👩🏻‍🌾", "👩🏻‍🍳", "👩‍❤️‍💋‍👨", "😴", "🥳", "🧘🏼‍♀️", "🍔"],
+
+    getRandomEmoji: function(arr) {
+        let randomIndex = Math.floor(Math.random() * arr.length);
+        let randomEmoji = arr[randomIndex];
+        allEmojiArr.push(randomEmoji);
+        renderEmj();
+    }
+};
+

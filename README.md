@@ -31,6 +31,8 @@ document.getElementById('textbox_id').value;
 document.getElementById("searchTxt").value;
 ```
 
+2) ways to verically align content (link to the article in useful resources);
+
 
 ### Continued development
 
@@ -43,6 +45,7 @@ document.getElementById("searchTxt").value;
 
 
 - [Stack Overflow](https://stackoverflow.com/questions/11563638/how-do-i-get-the-value-of-text-input-field-using-javascript) - This article contains more info on methods to fetch value from an input feild.
+- [Align vertically (rus)](https://ruseller.com/lessons.php?id=1248) - The article gives 6 methods to vertically align with css.
 
 
 - [Git + GitHub](https://www.youtube.com/watch?v=RGOj5yH7evk) - the basic git commands (Youtube).
