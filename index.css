@@ -1,5 +1,4 @@
 html {
-    height: 100vh;
     font-family: Baloo;
 }
 
@@ -7,10 +6,12 @@ body {
     padding: 10px;
     background-image: linear-gradient(#9393CB, #EBDDB3);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 button {
     cursor: pointer;
+    opacity: .6;
 }
 
 .content-wrapper {
@@ -83,7 +84,7 @@ input {
     align-items: center;
     flex: 1 1 auto;
     width: 50%;
-    margin: 0 auto 20px;
+    margin: 0 auto;
 }
 
 .interaction__box {
@@ -91,10 +92,22 @@ input {
     flex-direction: column;
 }
 
+.random-activity,
+.random-basic,
+.random-dayoff {
+    margin: 1em auto 0;
+    justify-content: space-between;
+}
+
 .random-basic {
     width: 70%;
-    margin: 0 auto;
-    justify-content: space-between;
+}
+.random-activity {
+    width: 45%;
+}
+.random-dayoff {
+    justify-content: center;
+    margin-bottom: 1em;
 }
 
 .random-btn {
